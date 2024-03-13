@@ -16,7 +16,7 @@
 # .env
 
 # Gemfile.lock 
-Gemfile.lock
+gemfile.lock
 
 # Ignore Byebug command history file.
 .byebug_history
