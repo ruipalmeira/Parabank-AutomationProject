@@ -11,11 +11,11 @@ IMPLICIT_WAIT_TIMEOUT = 10
 WAIT_BETWEEN_STEPS = 1
 
 Capybara.register_driver :webdriver do |app|
- options = Selenium::WebDriver::Firefox::Options.new
+ options = Selenium::WebDriver::Chrome::Options.new
  options.add_argument('-width=1920')
  options.add_argument('-height=1080')
 
- Capybara::Selenium::Driver.new app, browser: :firefox, options: options
+ Capybara::Selenium::Driver.new app, browser: :chrome, options: options
 end
 
 
