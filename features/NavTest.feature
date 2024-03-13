@@ -15,5 +15,6 @@ Feature: Parabank Website Navigation
     Then User must see "Services" page
     Given User clicks "Products"
     Then User must see "Products" page
+    Then User must go to "https://parabank.parasoft.com/parabank/index.htm"
     Given User clicks "Admin Page"
     Then User must see "Admin Page" page

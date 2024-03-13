@@ -13,15 +13,15 @@ Then('User must see Parabank home page') do
 end
 
 Then('User clicks "About Us"') do
-  page.find(:xpath, "//a[contains(text(),'About Us')]").click
+  page.find(:xpath, "//div/div[2]/ul/li/a[contains(text(),'About Us')]").click
 end
 
 Then('User must see "About Us" page') do
-  expect(page).to have_selector(:xpath, "//h1[contains(text(), 'Parasoft Demo Website')]")
+  expect(page).to have_selector(:xpath, "//div[@id='bodyPanel']/div[@id='rightPanel']/h1")
 end
 
 Then('User clicks "Services"') do
-  page.find(:xpath, "//a[contains(text(),'Services')]").click
+  page.find(:xpath, "//div/div[2]/ul/li/a[contains(text(),'Services')]").click
 end
 
 Then('User must see "Services" page') do
@@ -29,15 +29,20 @@ Then('User must see "Services" page') do
 end
 
 Then('User clicks "Products"') do
-  page.find(:xpath, "//a[contains(text(),'Products')]").click
+  page.find(:xpath, "//div/div[2]/ul/li/a[contains(text(),'Products')]").click
 end
 
 Then('User must see "Products" page') do
   expect(page).to have_selector(:xpath, "//p[contains(text(), 'Products')]")
 end
 
+Then('User must go to {string}') do |address|
+  visit address
+  sleep 1
+end
+
 Then('User clicks "Admin Page"') do
-  page.find(:xpath, "//a[contains(text(),'Products')]").click
+  page.find(:xpath, "//a[contains(text(),'Admin Page')]").click
 end
 
 Then('User must see "Admin Page" page') do
