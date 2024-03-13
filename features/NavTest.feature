@@ -1,3 +1,4 @@
+@NavSystem
 Feature: Parabank Website Navigation
   As a Parabank user,
   I want to browse the website,
