@@ -14,7 +14,7 @@ Capybara.register_driver :webdriver do |app|
  options = Selenium::WebDriver::Chrome::Options.new
  options.add_argument('-width=1920')
  options.add_argument('-height=1080')
-
+ options.add_argument('-incognito')
  Capybara::Selenium::Driver.new app, browser: :chrome, options: options
 end
 

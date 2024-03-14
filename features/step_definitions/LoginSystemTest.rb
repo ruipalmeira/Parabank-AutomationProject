@@ -12,75 +12,79 @@ end
 
 Then('User must fill First Name field with {string}') do |argument|
   page.find(:xpath, "//input[@name='customer.firstName']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill Last Name field with {string}') do |argument|
   page.find(:xpath, "//input[@id='customer.lastName']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill Address field with {string}') do |argument|
   page.find(:xpath, "//input[@id='customer.address.street']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill City field with {string}') do |argument|
   page.find(:xpath, "//input[@id='customer.address.city']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill State field with {string}') do |argument|
   page.find(:xpath, "//input[@id='customer.address.state']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill ZipCode field with {string}') do |argument|
   page.find(:xpath, "//input[@id='customer.address.zipCode']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill Phone # field with {string}') do |argument|
 page.find(:xpath, "//input[@id='customer.phoneNumber']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill SSN field with {string}') do |argument|
   page.find(:xpath, "//input[@id='customer.ssn']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill Username field with {string}') do |argument|
   page.find(:xpath, "//input[@id='customer.username']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill Password field with {string}') do |argument|
   page.find(:xpath, "//input[@id='customer.password']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must fill Confirm field with {string}') do |argument|
   page.find(:xpath, "//input[@id='repeatedPassword']").set(argument)
-  sleep 3
+  sleep 1
 end
 
 Then('User must click Register button') do
   page.find(:xpath, "//div[@id='bodyPanel']/div[@id='rightPanel']/form/table/tbody/tr[13]/td[2]/input").click
 end
 
+Then('Check if User is Registered') do
+  expect(page).to have_selector(:xpath, "//h1[contains(text(), 'Welcome palmeira')]")
+end
+
 Given('User must fill login Username field {string}') do |string|
-  // Write code here that turns the phrase above into concrete actions
+  expect(page).to have_selector(:xpath, "//div/div[@id='bodyPanel']/div[@id='leftPanel']/div[@id='loginPanel']/form/div/input[@name='username']").set(string)
 end
 
 Then('User must fill login Password field with {string}') do |string|
-  // Write code here that turns the phrase above into concrete actions
+  expect(page).to have_selector(:xpath, "//div/div[@id='bodyPanel']/div[@id='leftPanel']/div[@id='loginPanel']/form/div/input[@name='password']").set(string)
 end
 
-Then('User must click Login button') do |string|
-  // Write code here that turns the phrase above into concrete actions
+Then('User must click Login button') do
+  page.find(:xpath, "//div/div[@id='bodyPanel']/div[@id='leftPanel']/div[@id='loginPanel']/form/div/input[@type='submit']").click
 end
 
 Then('User must see Bank Account page') do
-  expect(page).to have_selector(:xpath, "//h1[contains(text*(), 'Welcome palmeira')]")
+  expect(page).to have_selector(:xpath, "//p[contains(text(),'Welcome Rui Palmeira')]")
 end
