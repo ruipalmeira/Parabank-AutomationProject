@@ -1,4 +1,4 @@
-@LoginSystem
+@RegistrationSystem
 Feature: Parabank Website Login System Test
   As an unregistered Parabank user,
   I want to browse the website,
@@ -25,9 +25,3 @@ Feature: Parabank Website Login System Test
     Then User must fill Confirm field with "1234"
     Then User must click Register button 
     Then Check if User is Registered
-
-  Scenario: Login to Account in Parabank Website
-    Given User must fill login Username field 'rpalmeira'
-    Then User must fill login Password field with '1234'
-    Then User must click Login button
-    Then User must see Bank Account page

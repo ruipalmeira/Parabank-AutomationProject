@@ -74,11 +74,11 @@ Then('Check if User is Registered') do
 end
 
 Given('User must fill login Username field {string}') do |string|
-  expect(page).to have_selector(:xpath, "//div/div[@id='bodyPanel']/div[@id='leftPanel']/div[@id='loginPanel']/form/div/input[@name='username']").set(string)
+  page.find(:xpath, "//div/div[@id='bodyPanel']/div[@id='leftPanel']/div[@id='loginPanel']/form/div/input[@name='username']").set(string)
 end
 
 Then('User must fill login Password field with {string}') do |string|
-  expect(page).to have_selector(:xpath, "//div/div[@id='bodyPanel']/div[@id='leftPanel']/div[@id='loginPanel']/form/div/input[@name='password']").set(string)
+  page.find(:xpath, "//div/div[@id='bodyPanel']/div[@id='leftPanel']/div[@id='loginPanel']/form/div/input[@name='password']").set(string)
 end
 
 Then('User must click Login button') do
