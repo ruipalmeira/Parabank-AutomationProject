@@ -1,6 +1,7 @@
+@LoginSystem
 Feature: Parabank Website Login System Test
-  As an registered Parabank user,
-  I want to browse the website,
+  As a registered Parabank user,
+  I want to browse parabank site,
   So I can use banking features.
 
   Background: Parabank Website is up and reachable
@@ -9,7 +10,7 @@ Feature: Parabank Website Login System Test
     Then User must see Parabank home page
 
   Scenario: Login to Account in Parabank Website
-    Given User must fill login Username field 'rpalmeira'
-    Then User must fill login Password field with '1234'
+    Given User must fill Username field 'rpalmeira'
+    Then User must fill Password field with '1234'
     Then User must click Login button
     Then User must see Bank Account page

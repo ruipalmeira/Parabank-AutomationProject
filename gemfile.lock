@@ -88,6 +88,8 @@ GEM
     rainbow (3.1.1)
     rbenv (9001)
     regexp_parser (2.9.0)
+    report_builder (1.9)
+      json (>= 2.3.0)
     rexml (3.2.6)
     rspec (3.13.0)
       rspec-core (~> 3.13.0)
@@ -147,6 +149,7 @@ DEPENDENCIES
   capybara
   cucumber
   rbenv
+  report_builder
   rspec
   rubocop
   ruby-lsp

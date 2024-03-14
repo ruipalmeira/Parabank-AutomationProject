@@ -21,7 +21,7 @@ Then('User must see "About Us" page') do
 end
 
 Then('User clicks "Services"') do
-  page.find(:xpath, "//div/div[2]/ul/li/a[contains(text(),'Services')]").click
+  page.find(:xpath, "//div/div[2]/ul/li/a[contains(text(),'Sevices')]").click
 end
 
 Then('User must see "Services" page') do
